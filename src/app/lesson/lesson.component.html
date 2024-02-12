@@ -1,110 +1,12 @@
-<h1>{{bookName}}</h1>
-<p>{{bookDesc}}</p>
-<ul>
-    <li *ngFor="let auth of bookAuth;">{{bookAuth}}</li>
-</ul>
-<p>{{bookDesc1}}</p>
-<ul>
-    <li *ngFor="let auth1 of bookAuth1;">
-    
-        {{bookAuth1}}
+<!-- your-component.component.html -->
+
+<div>
+  <ul>
+    <li *ngFor="let user of JustService.countries; let i = index">
+      {{ user }}
+      <button (click)="removeUser(i)">Remove</button>
     </li>
-</ul>
-<br>
-<br>
-<br>
-
-<h1>{{techniquePre}}</h1>
-<h3>{{title}}</h3>
-<ul>
-    <li *ngFor="let themes of themes;">
-        {{themes}}
-    </li>
-</ul>
-
-<h3>{{timeCompl}}</h3>
-<ul>
-    <li *ngFor="let objective of objective;">
-        {{objective}}
-    </li>
-</ul>
-<h3>{{sorting}}</h3>
-<ul>
-    <li *ngFor="let info of info;">
-        {{info}}
-    </li>
-</ul>
-<h3>{{dataSt}}</h3>
-<ul>
-    <li *ngFor="let information of information;">
-        {{information}}
-    </li>
-</ul>
-<h3>{{completeS}}</h3>
-<ul>
-    <li *ngFor="let all of all;">
-        {{all}}
-    </li>
-</ul>
-
-
-
-
-
-
-
-
-<table width="500" border="1">
-    <tr>
-        <th>{{indexS}}</th>
-        <th>{{studentFullName}}</th>
-        <th>{{classs}}</th>
-        <th>{{tutorNaem}}</th>
-        <th>{{overall}}</th>
-        <th>{{remark}}</th>
-    </tr>
-    <tr>
-        <td>{{indexS1}}</td>
-        <td>{{studentN1}}</td>
-        <td>{{studentClassN1}}</td>
-        <td>{{tutorN1}}</td>
-        <td>{{resOverallN1}}</td>
-        <td>{{positionN1}}</td>
-    </tr>
-    <tr>
-        <td>{{indexS2}}</td>
-        <td>{{studentN1}}</td>
-        <td>{{studentClassN1}}</td>
-        <td>{{tutorN1}}</td>
-        <td>{{resOverallN1}}</td>
-        <td>{{positionN1}}</td>
-    </tr>
-    <tr>
-        <td>{{indexS3}}</td>
-        <td>{{studentN1}}</td>
-        <td>{{studentClassN1}}</td>
-        <td>{{tutorN1}}</td>
-        <td>{{resOverallN1}}</td>
-        <td>{{positionN1}}</td>
-    </tr>
-    <tr>
-        <td>{{indexS4}}</td>
-        <td>{{studentN1}}</td>
-        <td>{{studentClassN1}}</td>
-        <td>{{tutorN1}}</td>
-        <td>{{resOverallN1}}</td>
-        <td>{{positionN1}}</td>
-    </tr>
-    <tr>
-        <td>{{indexS5}}</td>
-        <td>{{studentN1}}</td>
-        <td>{{studentClassN1}}</td>
-        <td>{{tutorN1}}</td>
-        <td>{{resOverallN1}}</td>
-        <td>{{positionN1}}</td>
-    </tr>
-    
-
-
-
-</table>
+  </ul>
+  <input type="text" name="clearInput" #newUser  />
+  <button (click)="addUser(newUser.value)">Add User</button>
+</div>
